@@ -121,7 +121,9 @@ def partial_dependency(bst, X, y, feature_ids = [], f_id = -1):
             y_pred[i] = np.average(bst.predict(data, ntree_limit = bst.best_ntree_limit))
 
     return grid, y_pred
+```
 
+```python
 import matplotlib
 import matplotlib.pyplot as plt
 %matplotlib inline
