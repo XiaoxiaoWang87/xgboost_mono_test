@@ -9,13 +9,13 @@ Model monotonicity is useful in the real-world too. For example, when you apply 
 
 If the underlying model is not monotonic, you may well find someone with a credit card balance $100 higher than you and otherwise identical credit profiles getting approved. To some extent, forcing the model monotonicity reduces overfitting. For the case above, it may improve fairness.
 
-**Beyond Linear Models**
+##Beyond Linear Models
 
 It is possible, at least approximately, to force the model monotonicity constraint in a non-linear model as well. For a tree-based model, if for each split of a particular variable we require the right daughter node's average value to be higher than the left daughter node (otherwise the split will not be made), then approximately the variable's relationship with the dependent variable is monotonically increasing; and vise versa.
 
 This monotonicity constraint has been implemented in the R **`gbm`** model. Very recently, the author of **`Xgboost`** (one of my favorite machine learning tools!) also implemented this feature into **`Xgboost`** ([Issues 1514](https://github.com/dmlc/xgboost/issues/1514)). Below I made a very simple tutorial for this in Python.
 
-**Tutorial for Xgboost**
+##Tutorial for Xgboost
 
 I'm going to use the California Housing dataset [1] for this tutorial. This dataset consists of 20,460 observations. Each observation represents a neighborhood in California. The response variable is the median house value of a neighborhood. Predictors include median income, average house occupancy, and location etc. of that neighborhood.
 
@@ -193,7 +193,7 @@ Is it a good idea to enforce monotonicity constraints on features? It really dep
 
 (The iPython Notebook of this tutorial can be found [here](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/xgboost_monotonicity_tutorial.ipynb))
 
-**Bibliography**
+##Bibliography
 
 [1]: T. Hastie, R. Tibshirani and J. Friedman, “Elements of Statistical Learning Ed. 2”, Springer, 2009, pp. 371-375
 
