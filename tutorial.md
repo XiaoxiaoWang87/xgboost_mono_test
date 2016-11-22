@@ -185,7 +185,7 @@ feature_names = ['MedInc', 'AveOccup', 'HouseAge']
 feature_monotones = [1, -1, 1]
 ```
 
-![_config.yml](/images/2016-11-20-monotonicity_constraint/w_constraint_three_feature.png)
+![Three features](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/w_constraint_three_feature.png)
 
 I assume that the median house value is positively correlated with median income and house age, but negatively correlated with average house occupancy.
 
