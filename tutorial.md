@@ -17,7 +17,7 @@ This monotonicity constraint feature has been implemented **`Xgboost`**. Below i
 
 ##Tutorial for Xgboost
 
-I'm going to use the California Housing dataset [1] for this tutorial. This dataset consists of 20,460 observations. Each observation represents a neighborhood in California. The response variable is the median house value of a neighborhood. Predictors include median income, average house occupancy, and location etc. of that neighborhood.
+The California Housing dataset [1] is used for this tutorial. This dataset consists of 20,460 observations. Each observation represents a neighborhood in California. The response variable is the median house value of a neighborhood. Predictors include median income, average house occupancy, and location etc. of that neighborhood.
 
 First we load the data. If you use **`scikit-learn`**, you just need to do:
 
