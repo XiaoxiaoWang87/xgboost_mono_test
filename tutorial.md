@@ -3,7 +3,7 @@ Monotonicity Constraint in Xgboost
 
 Fitting a model with a high accuracy is great, but is usually not enough. Quite often, we also want a model to be simple and interpretable. An example of such an interpretable model is a linear regression, for which the fitted coefficient of a variable means holding other variables as fixed, how does the response variable change with respect to the predictor. For a linear regression, this relationship is also **monotonic**: the fitted coefficient is either positive or negative.
 
-**Model Monotonicity: An Example**
+##Model Monotonicity: An Example
 
 Model monotonicity is useful in the real-world too. For example, when you apply for a credit card but were turned down, the bank usually tells you reasons (that you mostly don't agree with) why the decision is made. You may hear things like your previous credit card balances are too high, etc. In fact, this means that the bank's approval algorithm has a monotonically increasing relationship between an applicant's credit card balance and his / her risk. Your risk score is penalized because of a higher-than-average card balance.
 
