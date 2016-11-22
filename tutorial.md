@@ -157,7 +157,7 @@ Without any monotonicity constraint, the relationship between the median income 
 
 ![One feature, no constraint](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/no_constraint_one_feature.png)
 
-One can see that at very low income and income around 10 (times its unit), the relationship between median income and house value is not strictly monotonic.
+One can see that at very low income and income around 10 (times its unit), the relationship between median income and median house value is not strictly monotonic.
 
 You may be able to find some explanations for this non-monotonic behavior (e.g. feature interactions). In some cases, it may even be a real effect which still holds true after more features are fitted. If you are very convinced about that, I suggest you not enforce any monotonic constraint on the variable, otherwise important insights may be ignored. But when the non-monotonic behavior is purely because of noise, setting monotonic constraints can reduce overfitting.
 
