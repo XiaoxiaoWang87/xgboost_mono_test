@@ -153,7 +153,7 @@ Here I wrote a helper function `partial_dependency` to calculate the variable de
 
 Without any monotonicity constraint, the relationship between the median income and median house value looks like this:
 
-![_config.yml](/images/2016-11-20-monotonicity_constraint/no_constraint_one_feature.png)
+![One feature, no constraint](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/no_constraint_one_feature.png)
 
 One can see that at very low income and income around 10 (times its unit), the relationship between median income and house value is not strictly monotonic.
 
@@ -174,7 +174,7 @@ Looks like compared to before the training error slightly increased while testin
 
 Now we can check the variable dependency again:
 
-![_config.yml](/images/2016-11-20-monotonicity_constraint/w_constraint_one_feature.png)
+![One feature, constraint](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/w_constraint_one_feature.png)
 
 Great! Now the response is monotonically increasing with the predictor. This model has also become a bit easier to explain.
 
