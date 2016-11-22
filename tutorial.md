@@ -31,7 +31,7 @@ print cal_housing.feature_names #['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms',
 print cal_housing.data.shape #(20640, 8)
 ```
 
-To start, we use a single feature "the median income" to predict the house value. We first split the data into training and testing datasets. Then we use a 5-fold cross-validation and early-stopping on the training dataset to determine the best number of trees. Last we use the entire training set to train my model and evaluate its performance on the testset.
+To start, we use a single feature "the median income" to predict the house value. We first split the data into training and testing datasets. Then we use a 5-fold cross-validation and early-stopping on the training dataset to determine the best number of trees. Last we use the entire training set to train the model and evaluate its performance on the testset.
 
 ```python
 import numpy as np
