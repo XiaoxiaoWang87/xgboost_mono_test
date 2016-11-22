@@ -21,7 +21,7 @@ I'm going to use the California Housing dataset [1] for this tutorial. This data
 
 First we load the data. If you use **`scikit-learn`**, you just need to do:
 
-{% highlight Python %}
+```python
 
 from sklearn.datasets.california_housing import fetch_california_housing
 from sklearn.model_selection import train_test_split
@@ -29,7 +29,7 @@ from sklearn.model_selection import train_test_split
 cal_housing = fetch_california_housing()
 print cal_housing.feature_names #['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude']
 print cal_housing.data.shape #(20640, 8)
-{% endhighlight %}
+```
 
 To start, we use a single feature "the median income" to predict the house value. I first split the data into training and testing datasets. Then I use a 5-fold cross-validation and early-stopping on the training dataset to determine the best number of trees. Last I use the entire training set to train my model and evaluate its performance on the testset.
 
