@@ -159,7 +159,7 @@ Without any monotonicity constraint, the relationship between the median income 
 
 One can see that at very low income and income around 10 (times its unit), the relationship between median income and house value is not strictly monotonic.
 
-You may be able to find some explanations for this non-monotonic behavior (e.g. feature interactions). In some cases, it may even be a real effect which cannot be removed by fitting more features. If you are very convinced about that, I suggest you not enforce any monotonic constraint on the variable, otherwise important insights may be ignored. But when the non-monotonic behavior is purely because of noise, setting monotonic constraints can reduce overfitting.
+You may be able to find some explanations for this non-monotonic behavior (e.g. feature interactions). In some cases, it may even be a real effect which still holds true after more features are fitted. If you are very convinced about that, I suggest you not enforce any monotonic constraint on the variable, otherwise important insights may be ignored. But when the non-monotonic behavior is purely because of noise, setting monotonic constraints can reduce overfitting.
 
 For this example, I'm not sure, but I couldn't find any reasons that neighborhoods with low median income have a high median house value either. Therefore I will try enforcing the monotonicity on the median income:
 
