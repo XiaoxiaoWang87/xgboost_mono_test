@@ -196,4 +196,5 @@ Is it a good idea to enforce monotonicity constraints on features? It really dep
 **Bibliography**
 
 [1]: T. Hastie, R. Tibshirani and J. Friedman, “Elements of Statistical Learning Ed. 2”, Springer, 2009, pp. 371-375
+
 [2]: Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.
