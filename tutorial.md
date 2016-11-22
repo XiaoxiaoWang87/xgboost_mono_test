@@ -33,7 +33,7 @@ print cal_housing.data.shape #(20640, 8)
 
 To start, we use a single feature "the median income" to predict the house value. I first split the data into training and testing datasets. Then I use a 5-fold cross-validation and early-stopping on the training dataset to determine the best number of trees. Last I use the entire training set to train my model and evaluate its performance on the testset.
 
-{% highlight Python %}
+```python
 import numpy as np
 import xgboost as xgb
 
@@ -71,13 +71,13 @@ evallist  = [(dtrain, 'train'), (dtest, 'eval')]
 evals_result = {}
 bst = xgb.train(params, dtrain, num_boost_round = bst_cv.shape[0], evals_result = evals_result, evals = evallist,  verbose_eval = False)
 
-{% endhighlight %}
+```
 
 Notice the model parameter `'monotone_constraints'`. This is where the monotonicity constraints are set in **`Xgboost`**. For now I set `'monotone_constraints': (0)`, which means a single feature without constraint.
 
 Let's take a look at the model performances:
 
-{% highlight Python %}
+```python
 print 'Number of boosting rounds %d,\
        Training RMSE: %.4f, \
        Testing RMSE: %.4f' % \
@@ -86,14 +86,14 @@ print 'Number of boosting rounds %d,\
         evals_result['train']['rmse'][-1],
         evals_result['eval']['rmse'][-1]
         )
-{% endhighlight %}
-{% highlight Python %}
+```
+```python
 Number of boosting rounds 56,       Training RMSE: 0.8167,        Testing RMSE: 0.8287
-{% endhighlight %}
+```
 
 We can also check the relationship between the feature (median income) and the dependent variable (median house value):
 
-{% highlight Python %}
+```python
 def partial_dependency(bst, X, y, feature_ids = [], f_id = -1):
 
     """
@@ -147,7 +147,7 @@ for f in feature_names:
     ax.set_ylabel('Partial Dependence', fontsize = 12)
     handles, labels = ax.get_legend_handles_labels()
     ax.legend(handles, labels, loc = 'best', fontsize = 12)
-{% endhighlight %}
+```
 
 Here I wrote a helper function `partial_dependency` to calculate the variable dependency or partial dependency for an arbitrary model. The partial dependency [[^2]] describes that with other variables fixed, how the average response depends on a predictor.
 
@@ -161,14 +161,14 @@ You may be able to find some explanations for this non-monotonic behavior (e.g. 
 
 For this example, I'm not sure, but I couldn't find any reasons that neighborhoods with low median income have a high median house value either. Therefore I will try enforcing the monotonicity on the median income:
 
-{% highlight Python %}
+```python
 feature_monotones = [1]
-{% endhighlight %}
+```
 
 I then repeat the CV procedure, refit the model and evaluate it on the testset. Below is the result:
-{% highlight Python %}
+```python
 Number of boosting rounds 59,       Training RMSE: 0.8189,        Testing RMSE: 0.8279
-{% endhighlight %}
+```
 
 Looks like compared to before the training error slightly increased while testing error slightly decreased. We may have reduced overfitting and improved our performance on the testset. However, given that statistical uncertainties on these numbers are probably as big as the differences, it is just a hypothesis. For this example, the bottom line is that adding monotonicity constraint does not significantly hurt the performance.
 
@@ -180,10 +180,10 @@ Great! Now the response is monotonically increasing with the predictor. This mod
 
 We can also enforce monotonicity constraints while fitting multiple features. For example:
 
-{% highlight Python %}
+```python
 feature_names = ['MedInc', 'AveOccup', 'HouseAge']
 feature_monotones = [1, -1, 1]
-{% endhighlight %}
+```
 
 ![_config.yml](/images/2016-11-20-monotonicity_constraint/w_constraint_three_feature.png)
 
