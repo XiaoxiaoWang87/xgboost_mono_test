@@ -11,7 +11,7 @@ If the underlying model is not monotonic, you may well find someone with a credi
 
 ##Beyond Linear Models
 
-It is possible, at least approximately, to force the model monotonicity constraint in a non-linear model as well. For a tree-based model, if for each split of a particular variable we require the right daughter node's average value to be higher than the left daughter node (otherwise the split will not be made), then approximately the variable's relationship with the dependent variable is monotonically increasing; and vise versa.
+It is possible, at least approximately, to force the model monotonicity constraint in a non-linear model as well. For a tree-based model, if for each split of a particular variable we require the right daughter node's average value to be higher than the left daughter node (otherwise the split will not be made), then approximately this predictor's relationship with the dependent variable is monotonically increasing; and vise versa.
 
 This monotonicity constraint feature has been implemented **`Xgboost`**. Below is a simple tutorial in Python.
 
