@@ -189,9 +189,9 @@ feature_monotones = [1, -1, 1]
 
 ![Three features](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/w_constraint_three_feature.png)
 
-I assume that the median house value is positively correlated with median income and house age, but negatively correlated with average house occupancy.
+We assume that the median house value is positively correlated with median income and house age, but negatively correlated with average house occupancy.
 
-Is it a good idea to enforce monotonicity constraints on features? It really depends. For the example I gave here, I didn't see a significant performance decrease, and I think the directions of these variables make intuitive sense. For other cases, especially when the number of variables are large, it may be difficult and even dangerous to do so. It certainly relies on a lot of domain expertise and exploratory analysis to fit a model that is "as simple as possible, but no simpler".
+Is it a good idea to enforce monotonicity constraints on features? It really depends. For the example here, we didn't see a significant performance decrease, and we think the directions of these variables make intuitive sense. For other cases, especially when the number of variables are large, it may be difficult and even dangerous to do so. It certainly relies on a lot of domain expertise and exploratory analysis to fit a model that is "as simple as possible, but no simpler".
 
 (The iPython Notebook of this tutorial can be found [here](https://github.com/XiaoxiaoWang87/xgboost_mono_test/blob/master/xgboost_monotonicity_tutorial.ipynb))
 
