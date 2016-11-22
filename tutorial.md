@@ -151,7 +151,7 @@ for f in feature_names:
     ax.legend(handles, labels, loc = 'best', fontsize = 12)
 ```
 
-Here I wrote a helper function `partial_dependency` to calculate the variable dependency or partial dependency for an arbitrary model. The partial dependency [2] describes that with other variables fixed, how the average response depends on a predictor.
+Here I wrote a helper function `partial_dependency` to calculate the variable dependency or partial dependency for an arbitrary model. The partial dependency [2] describes that when other variables fixed, how the average response depends on a predictor.
 
 Without any monotonicity constraint, the relationship between the median income and median house value looks like this:
 
