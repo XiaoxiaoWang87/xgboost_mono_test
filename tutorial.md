@@ -172,7 +172,7 @@ We then repeat the CV procedure, refit the model and evaluate it on the testset.
 Number of boosting rounds 59,       Training RMSE: 0.8189,        Testing RMSE: 0.8279
 ```
 
-Looks like compared to before the training error slightly increased while testing error slightly decreased. We may have reduced overfitting and improved our performance on the testset. However, given that statistical uncertainties on these numbers are probably as big as the differences, it is just a hypothesis. For this example, the bottom line is that adding monotonicity constraint does not significantly hurt the performance.
+Looks like compared to before the training error slightly increased while testing error slightly decreased. We may have reduced overfitting and improved our performance on the testset. However, given that statistical uncertainties on these numbers are probably just as big as the differences, it is just a hypothesis. For this example, the bottom line is that adding monotonicity constraint does not significantly hurt the performance.
 
 Now we can check the variable dependency again:
 
