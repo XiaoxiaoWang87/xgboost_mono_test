@@ -151,7 +151,7 @@ for f in feature_names:
     ax.legend(handles, labels, loc = 'best', fontsize = 12)
 ```
 
-Here I wrote a helper function `partial_dependency` to calculate the variable dependency or partial dependency for an arbitrary model. The partial dependency [2] describes that when other variables fixed, how the average response depends on a predictor.
+Here we create a helper function `partial_dependency` to calculate the variable dependency or partial dependency for an arbitrary model. The partial dependency [2] describes that when other variables fixed, how the average response depends on a predictor.
 
 Without any monotonicity constraint, the relationship between the median income and median house value looks like this:
 
@@ -167,7 +167,7 @@ For this example, it is hard to justify that neighborhoods with a low median inc
 feature_monotones = [1]
 ```
 
-I then repeat the CV procedure, refit the model and evaluate it on the testset. Below is the result:
+We then repeat the CV procedure, refit the model and evaluate it on the testset. Below is the result:
 ```python
 Number of boosting rounds 59,       Training RMSE: 0.8189,        Testing RMSE: 0.8279
 ```
