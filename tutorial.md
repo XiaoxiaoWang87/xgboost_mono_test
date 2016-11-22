@@ -31,7 +31,7 @@ print cal_housing.feature_names #['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms',
 print cal_housing.data.shape #(20640, 8)
 ```
 
-To start, we use a single feature "the median income" to predict the house value. I first split the data into training and testing datasets. Then I use a 5-fold cross-validation and early-stopping on the training dataset to determine the best number of trees. Last I use the entire training set to train my model and evaluate its performance on the testset.
+To start, we use a single feature "the median income" to predict the house value. We first split the data into training and testing datasets. Then we use a 5-fold cross-validation and early-stopping on the training dataset to determine the best number of trees. Last we use the entire training set to train my model and evaluate its performance on the testset.
 
 ```python
 import numpy as np
@@ -73,7 +73,7 @@ bst = xgb.train(params, dtrain, num_boost_round = bst_cv.shape[0], evals_result 
 
 ```
 
-Notice the model parameter `'monotone_constraints'`. This is where the monotonicity constraints are set in **`Xgboost`**. For now I set `'monotone_constraints': (0)`, which means a single feature without constraint.
+Notice the model parameter `'monotone_constraints'`. This is where the monotonicity constraints are set in **`Xgboost`**. For now we set `'monotone_constraints': (0)`, which means a single feature without constraint.
 
 Let's take a look at the model performances:
 
