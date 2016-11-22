@@ -17,7 +17,7 @@ This monotonicity constraint has been implemented in the R **`gbm`** model. Very
 
 **Tutorial for Xgboost**
 
-I'm going to use the California Housing dataset [[^1]] for this tutorial. This dataset consists of 20,460 observations. Each observation represents a neighborhood in California. The response variable is the median house value of a neighborhood. Predictors include median income, average house occupancy, and location etc. of that neighborhood.
+I'm going to use the California Housing dataset [1] for this tutorial. This dataset consists of 20,460 observations. Each observation represents a neighborhood in California. The response variable is the median house value of a neighborhood. Predictors include median income, average house occupancy, and location etc. of that neighborhood.
 
 First we load the data. If you use **`scikit-learn`**, you just need to do:
 
@@ -195,5 +195,5 @@ Is it a good idea to enforce monotonicity constraints on features? It really dep
 
 **Bibliography**
 
-[^1]: T. Hastie, R. Tibshirani and J. Friedman, “Elements of Statistical Learning Ed. 2”, Springer, 2009, pp. 371-375
-[^2]: Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.
+[1]: T. Hastie, R. Tibshirani and J. Friedman, “Elements of Statistical Learning Ed. 2”, Springer, 2009, pp. 371-375
+[2]: Friedman, Jerome H. "Greedy function approximation: a gradient boosting machine." Annals of statistics (2001): 1189-1232.
