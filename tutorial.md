@@ -1,10 +1,4 @@
 
----
-layout: post
-title: A Tutorial of Model Monotonicity Constraint Using Xgboost
-comments: true
----
-
 Fitting a model with a high accuracy is great, but is usually not enough. Quite often, we also want a model to be simple and interpretable. An example of such an interpretable model is a linear regression, for which the fitted coefficient of a variable means holding other variables as fixed, how does the response variable change with respect to the predictor. For a linear regression, this relationship is also **monotonic**: the fitted coefficient is either positive or negative.
 
 **Model Monotonicity: An Example**
