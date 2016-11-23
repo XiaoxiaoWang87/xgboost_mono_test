@@ -5,7 +5,7 @@ Fitting a model and having a high accuracy is great, but is usually not enough. 
 
 ##Model Monotonicity: An Example
 
-Model monotonicity is sometimes applied in the real-world. For example, when you apply for a credit card but were turned down, the bank usually tells you reasons (that you mostly don't agree with) why the decision is made. You may hear things like your previous credit card balances are too high, etc. In fact, this means that the bank's approval algorithm has a monotonically increasing relationship between an applicant's credit card balance and his / her risk. Your risk score is penalized because of a higher-than-average card balance.
+Model monotonicity is sometimes applied in the real-world. For example, if you apply for a credit card but got declined, the bank usually tells you reasons (that you mostly don't agree with) why the decision is made. You may hear things like your previous credit card balances are too high, etc. In fact, this means that the bank's approval algorithm has a monotonically increasing relationship between an applicant's credit card balance and his / her risk. Your risk score is penalized because of a higher-than-average card balance.
 
 If the underlying model is not monotonic, you may well find someone with a credit card balance $100 higher than you but otherwise identical credit profiles getting approved. To some extent, forcing the model monotonicity reduces overfitting. For the case above, it may improve fairness.
 
